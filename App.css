@@ -1,0 +1,398 @@
+/* --- Global Styles --- */
+/* Mengatur font dasar untuk seluruh halaman dan background ungu candy */
+body {
+  font-family: 'Inter', sans-serif; /* Font yang bersih dan modern */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #C8A0FF; /* Warna ungu candy */
+  color: #333; /* Warna teks default */
+  line-height: 1.6; /* Kerapian baris teks */
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* --- Styling untuk Navbar (Tidak Fixed, Background Biru, Lebih Kecil) --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 2rem;
+  background-color: #007bff; /* Warna biru untuk background navbar */
+  color: #fff;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid #0056b3;
+}
+
+.navbar-brand {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+.navbar-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 35px; /* Jarak antar tautan */
+}
+
+.navbar-links li a,
+.navbar-links li a:visited {
+  color: #FFFFFF !important; /* Memastikan warna teks tautan tetap PUTIH */
+  text-decoration: none;
+  font-size: 0.95em;
+  padding: 0.3rem 0.7rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-links li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #FFFFFF !important;
+}
+
+
+/* --- Styling untuk Hero Section (Foto Profil dan Nama) --- */
+.hero-section {
+  padding: 4rem 2rem 4rem;
+  background: linear-gradient(135deg, #C8A0FF, #A0C8FF);
+  color: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  margin-top: 0;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.profile-picture {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1.5rem;
+}
+
+.hero-section h1 {
+  font-size: 3.5em;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section p {
+  font-size: 1.5em;
+  color: #eee;
+  margin-bottom: 2rem;
+}
+
+/* --- Styling untuk Bagian About --- */
+#about {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #fff;
+  color: #333;
+}
+
+#about h2 {
+  font-size: 2.5em;
+  margin-bottom: 2rem;
+  color: #007bff;
+}
+
+#about p {
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+  font-size: 1.1em;
+  line-height: 1.8;
+}
+
+/* --- Styling untuk Bagian Skills (Baru) --- */
+#skills {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #e6e6e6; /* Latar belakang abu-abu terang untuk bagian skills */
+  color: #333;
+}
+
+#skills h2 {
+  font-size: 2.5em;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.skill-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Kolom lebih kecil untuk skill */
+  gap: 25px; /* Jarak antar kartu skill */
+}
+
+.skill-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Bayangan lebih lembut */
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  padding: 1.5rem; /* Padding di dalam kartu skill */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.skill-logo {
+  width: 80px; /* Ukuran logo skill */
+  height: 80px;
+  object-fit: contain; /* Memastikan logo terlihat utuh */
+  margin-bottom: 1rem;
+}
+
+.skill-card h3 {
+  font-size: 1.3em;
+  color: #007bff;
+  margin-bottom: 0.5rem;
+}
+
+.skill-card p {
+  font-size: 0.9em;
+  color: #555;
+  line-height: 1.5;
+}
+
+
+/* --- Styling untuk Bagian Kegiatan (Activities) --- */
+
+#activities {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+#activities h2 {
+  font-size: 2.5em;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.activity-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.activity-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  padding-bottom: 1.5rem;
+  text-align: left;
+}
+
+.activity-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Styling untuk Gambar Kegiatan di dalam Kartu --- */
+.activity-image {
+  width: 100%;
+  height: 150px; /* Tinggi gambar kegiatan */
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 1rem;
+}
+
+.activity-card h3 {
+  font-size: 1.5em;
+  color: #007bff;
+  margin: 1rem 1.5rem 0.5rem;
+}
+
+.activity-card p {
+  font-size: 1em;
+  color: #555;
+  margin: 0 1.5rem 1rem;
+  line-height: 1.6;
+}
+
+/* --- Akhir Styling untuk Bagian Kegiatan --- */
+
+/* --- Styling untuk Bagian Hobi (Hobbies) --- */
+#hobbies {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+#hobbies h2 {
+  font-size: 2.5em;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+/* --- Styling untuk Gambar Hobi di dalam Kartu --- */
+.hobby-image {
+  width: 100%;
+  height: 120px; /* Tinggi gambar hobi lebih kecil */
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 1rem;
+}
+/* --- Akhir Styling untuk Bagian Hobi --- */
+
+/* --- Styling untuk Bagian Kontak --- */
+#contact {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #fff;
+  color: #333;
+}
+
+#contact h2 {
+  font-size: 2.5em;
+  margin-bottom: 2rem;
+  color: #007bff;
+}
+
+#contact p {
+  font-size: 1.1em;
+  margin-bottom: 1.5rem;
+}
+
+.contact-links a {
+  display: inline-block;
+  margin: 0 15px;
+  color: #007bff;
+  text-decoration: none;
+  font-size: 1.2em;
+  padding: 10px 15px;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-links a:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* --- Media Queries untuk Responsif --- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 0.6rem 1rem;
+  }
+
+  .navbar-links {
+    margin-top: 0.6rem;
+    gap: 15px;
+  }
+
+  .navbar-brand {
+    font-size: 1.3em;
+  }
+
+  .navbar-links li a {
+    font-size: 0.85em;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .hero-section {
+    padding-top: 4rem;
+    min-height: 80vh;
+  }
+
+  .hero-section h1 {
+    font-size: 2.5em;
+  }
+
+  .hero-section p {
+    font-size: 1.2em;
+  }
+
+  .profile-picture {
+    width: 150px;
+    height: 150px;
+  }
+
+  #activities h2,
+  #hobbies h2,
+  #about h2,
+  #contact h2,
+  #skills h2 { /* Tambahkan skills h2 */
+    font-size: 2em;
+  }
+
+  .activity-grid, .skill-grid { /* Terapkan juga ke skill-grid */
+    grid-template-columns: 1fr;
+  }
+}
